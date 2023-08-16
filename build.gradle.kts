@@ -2,10 +2,11 @@ plugins {
     kotlin("jvm") version "1.9.0"
     kotlin("plugin.serialization") version "1.9.0"
     application
+    id("maven-publish")
 }
 
 group = "com.github.Abhimanyu14"
-version = "1.0.0"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -29,4 +30,16 @@ kotlin {
 
 application {
     mainClass.set("MainKt")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.username"
+            artifactId = "library-name"
+            version = "1.0.0"
+
+            from(components["kotlin"])
+        }
+    }
 }
