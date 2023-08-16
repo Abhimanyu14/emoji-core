@@ -2,10 +2,11 @@ plugins {
     kotlin("jvm") version "1.9.0"
     kotlin("plugin.serialization") version "1.9.0"
     application
+    id("maven-publish")
 }
 
 group = "com.github.Abhimanyu14"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -29,4 +30,15 @@ kotlin {
 
 application {
     mainClass.set("MainKt")
+}
+
+publishing {
+    publications {
+//        mavenJava(MavenPublication) {
+//            from components . java
+//                    groupId = "com.github.Abhimanyu14"
+//            artifactId = "emoji-core"
+//            version = "1.0.0"
+//        }
+    }
 }
