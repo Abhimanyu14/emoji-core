@@ -1,5 +1,7 @@
-import datasource.EmojiDataSource
-import datasource.EmojiDataSourceImpl
+package emoji.core
+
+import emoji.core.datasource.EmojiDataSource
+import emoji.core.datasource.EmojiDataSourceImpl
 import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {

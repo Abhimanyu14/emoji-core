@@ -1,4 +1,4 @@
-package emojifetcher
+package emoji.core.emojifetcher
 
 import okhttp3.Cache
 import okhttp3.Call

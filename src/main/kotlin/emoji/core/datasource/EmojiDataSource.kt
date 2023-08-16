@@ -1,6 +1,6 @@
-package datasource
+package emoji.core.datasource
 
-import model.NetworkEmoji
+import emoji.core.model.NetworkEmoji
 
 interface EmojiDataSource {
     suspend fun getAllEmojis(): List<NetworkEmoji>

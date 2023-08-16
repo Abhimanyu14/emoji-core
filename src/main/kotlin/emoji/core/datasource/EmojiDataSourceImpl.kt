@@ -1,9 +1,9 @@
-package datasource
+package emoji.core.datasource
 
-import emojifetcher.EmojiFetchCallback
-import emojifetcher.EmojiFetcher
-import emojifetcher.EmojiFetcherImpl
-import model.NetworkEmoji
+import emoji.core.emojifetcher.EmojiFetchCallback
+import emoji.core.emojifetcher.EmojiFetcher
+import emoji.core.emojifetcher.EmojiFetcherImpl
+import emoji.core.model.NetworkEmoji
 import java.io.File
 import java.io.IOException
 import kotlin.coroutines.resume

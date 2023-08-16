@@ -1,4 +1,4 @@
-package model
+package emoji.core.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

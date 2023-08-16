@@ -1,4 +1,4 @@
-package emojifetcher
+package emoji.core.emojifetcher
 
 interface EmojiFetchCallback {
     fun onFetchSuccess(
