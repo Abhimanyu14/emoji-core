@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.Abhimanyu14"
-version = "1.0.3"
+version = "1.0.4"
 
 repositories {
     mavenCentral()
@@ -37,7 +37,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.Abhimanyu14"
             artifactId = "emoji-core"
-            version = "1.0.3"
+            version = "1.0.4"
 
             from(components["kotlin"])
         }
