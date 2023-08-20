@@ -2,11 +2,13 @@
 
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
 
-Emoji core is a pure Kotlin library that fetches all emojis supported in the [latest Unicode standard 15.0](https://unicode.org/versions/Unicode15.0.0/) (Updated as on 13 September 2022).
+Emoji core is a pure Kotlin library that fetches all emojis supported in
+the [latest Unicode standard 15.0](https://unicode.org/versions/Unicode15.0.0/) (Updated as on 13 September 2022).
 
 # Setup
 
-1. Add it in your root build.gradle at the end of repositories:
+1. Add it in your root `build.gradle` at the end of repositories:
+
 ```kotlin
 allprojects {
     repositories {
@@ -15,30 +17,42 @@ allprojects {
 }
 ```
 
-2. Add dependency to required module
+2. Add dependency to module `build.gradle`
+
 ```kotlin
 dependencies {
-    implementation 'com.github.Abhimanyu14:emoji-core:$latest_version'
+    implementation "com.github.Abhimanyu14:emoji-core:$latest_version"
 }
 ```
 
-Latest version can be found here </br>
-[![](https://jitpack.io/v/Abhimanyu14/emoji-core.svg)](https://jitpack.io/#Abhimanyu14/emoji-core)
+Latest version can be found
+here - [![](https://jitpack.io/v/Abhimanyu14/emoji-core.svg)](https://jitpack.io/#Abhimanyu14/emoji-core)
 
 # Sample
 
 ## Kotlin
-The [Main application](/src/main/kotlin/emoji/core/Main.kt)  demonstrates how to use Emoji core to fetch emojis, using coroutines. </br>
-For demonstration purposes `runBlocking` is used. For actual projects call `emojiDataSource.getAllEmojis()` in a non-blocking coroutine.
+
+The [Main application](/src/main/kotlin/emoji/core/Main.kt)  demonstrates how to use Emoji core to fetch emojis, using
+coroutines. </br>
+</br>
+For demonstration purposes `runBlocking` is used. For actual projects call `emojiDataSource.getAllEmojis()` in a
+non-blocking coroutine.
 
 ## Sample Android App
-[Compose Emoji Picker](https://github.com/Abhimanyu14/compose-emoji-picker) internally uses Emoji Core for fetching the emojis.
+
+[Compose Emoji Picker](https://github.com/Abhimanyu14/compose-emoji-picker) internally uses Emoji Core for fetching the
+emojis.
 
 # Dependencies
 
 * kotlinx-coroutines-core
 * kotlinx-serialization-json
 * okhttp3
+
+# Issues
+
+Please do create new issues if there are any bugs or feature requests. </br>
+You can also directly reach out to me via [LinkedIn](https://www.linkedin.com/in/abhimanyu-n/)
 
 ## Find this repository useful? ♥️
 
