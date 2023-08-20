@@ -7,6 +7,9 @@ the [latest Unicode standard 15.0](https://unicode.org/versions/Unicode15.0.0/) 
 
 # Setup
 
+Latest version can be found here </br>
+[![](https://jitpack.io/v/Abhimanyu14/emoji-core.svg)](https://jitpack.io/#Abhimanyu14/emoji-core)
+
 1. Add it in your root `build.gradle` at the end of repositories:
 
 ```kotlin
@@ -24,9 +27,6 @@ dependencies {
     implementation "com.github.Abhimanyu14:emoji-core:$latest_version"
 }
 ```
-
-Latest version can be found
-here - [![](https://jitpack.io/v/Abhimanyu14/emoji-core.svg)](https://jitpack.io/#Abhimanyu14/emoji-core)
 
 # Sample
 
