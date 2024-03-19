@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.Abhimanyu14"
-version = "1.0.6"
+version = "1.0.7"
 
 repositories {
     mavenCentral()
@@ -47,7 +47,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.Abhimanyu14"
             artifactId = "emoji-core"
-            version = "1.0.6"
+            version = "1.0.7"
 
             from(components["kotlin"])
             artifact(tasks.getByName("androidReleaseSourcesJar"))
