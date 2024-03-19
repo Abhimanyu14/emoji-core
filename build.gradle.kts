@@ -32,6 +32,16 @@ application {
     mainClass.set("MainKt")
 }
 
+/**
+ * Source for publishing source code
+ * https://stackoverflow.com/a/70677010/9636037
+ */
+tasks.register("androidReleaseSourcesJar", Jar::class) {
+    archiveClassifier.set("sources")
+
+    from(kotlin.sourceSets["main"].kotlin.srcDirs)
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
@@ -43,14 +53,4 @@ publishing {
             artifact(tasks.getByName("androidReleaseSourcesJar"))
         }
     }
-}
-
-/**
- * Source for publishing source code
- * https://stackoverflow.com/a/70677010/9636037
- */
-tasks.register("androidReleaseSourcesJar", Jar::class) {
-    archiveClassifier.set("sources")
-
-    from(kotlin.sourceSets["main"].kotlin.srcDirs + kotlin.sourceSets["debug"].kotlin.srcDirs)
 }
