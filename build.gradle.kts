@@ -40,6 +40,17 @@ publishing {
             version = "1.0.5"
 
             from(components["kotlin"])
+            artifact(tasks.getByName("androidReleaseSourcesJar"))
         }
     }
+}
+
+/**
+ * Source for publishing source code
+ * https://stackoverflow.com/a/70677010/9636037
+ */
+tasks.register("androidReleaseSourcesJar", Jar::class) {
+    archiveClassifier.set("sources")
+
+    from(kotlin.sourceSets["main"].kotlin.srcDirs + kotlin.sourceSets["debug"].kotlin.srcDirs)
 }
