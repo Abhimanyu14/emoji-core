@@ -43,10 +43,10 @@ class EmojiFetcherImpl(
                 responseCallback = object : Callback {
                     override fun onFailure(
                         call: Call,
-                        ioException: IOException,
+                        e: IOException,
                     ) {
                         callback.onFetchFailure(
-                            errorMessage = ioException.message ?: "An error occurred",
+                            errorMessage = e.message ?: "An error occurred",
                         )
                     }
 

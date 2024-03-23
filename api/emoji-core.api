@@ -1,0 +1,73 @@
+public final class emoji/core/MainKt {
+	public static final fun main ()V
+	public static synthetic fun main ([Ljava/lang/String;)V
+}
+
+public abstract interface class emoji/core/datasource/EmojiDataSource {
+	public abstract fun getAllEmojis (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class emoji/core/datasource/EmojiDataSourceImpl : emoji/core/datasource/EmojiDataSource {
+	public fun <init> ()V
+	public fun <init> (Ljava/io/File;Lemoji/core/emojifetcher/EmojiFetcher;)V
+	public synthetic fun <init> (Ljava/io/File;Lemoji/core/emojifetcher/EmojiFetcher;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getAllEmojis (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class emoji/core/emojifetcher/EmojiFetchCallback {
+	public abstract fun onFetchFailure (Ljava/lang/String;)V
+	public abstract fun onFetchSuccess (Ljava/lang/String;)V
+}
+
+public abstract interface class emoji/core/emojifetcher/EmojiFetcher {
+	public abstract fun fetchEmojiData (Lemoji/core/emojifetcher/EmojiFetchCallback;Ljava/lang/String;)V
+}
+
+public final class emoji/core/emojifetcher/EmojiFetcher$DefaultImpls {
+	public static synthetic fun fetchEmojiData$default (Lemoji/core/emojifetcher/EmojiFetcher;Lemoji/core/emojifetcher/EmojiFetchCallback;Ljava/lang/String;ILjava/lang/Object;)V
+}
+
+public final class emoji/core/emojifetcher/EmojiFetcherImpl : emoji/core/emojifetcher/EmojiFetcher {
+	public fun <init> ()V
+	public fun <init> (Ljava/io/File;)V
+	public synthetic fun <init> (Ljava/io/File;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun fetchEmojiData (Lemoji/core/emojifetcher/EmojiFetchCallback;Ljava/lang/String;)V
+}
+
+public final class emoji/core/model/NetworkEmoji {
+	public static final field Companion Lemoji/core/model/NetworkEmoji$Companion;
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lemoji/core/model/NetworkEmoji;
+	public static synthetic fun copy$default (Lemoji/core/model/NetworkEmoji;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lemoji/core/model/NetworkEmoji;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCharacter ()Ljava/lang/String;
+	public final fun getCodePoint ()Ljava/lang/String;
+	public final fun getGroup ()Ljava/lang/String;
+	public final fun getSubgroup ()Ljava/lang/String;
+	public final fun getUnicodeName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final synthetic fun write$Self (Lemoji/core/model/NetworkEmoji;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class emoji/core/model/NetworkEmoji$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lemoji/core/model/NetworkEmoji$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lemoji/core/model/NetworkEmoji;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lemoji/core/model/NetworkEmoji;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class emoji/core/model/NetworkEmoji$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
