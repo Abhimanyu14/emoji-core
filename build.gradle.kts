@@ -5,8 +5,8 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.github.Abhimanyu14"
-version = "1.0.7"
+// group = "com.github.Abhimanyu14"
+// version = "1.0.7"
 
 repositories {
     mavenCentral()
@@ -36,21 +36,27 @@ application {
  * Source for publishing source code
  * https://stackoverflow.com/a/70677010/9636037
  */
-tasks.register("androidReleaseSourcesJar", Jar::class) {
+tasks.register(
+    name = "androidReleaseSourcesJar",
+    type = Jar::class,
+) {
     archiveClassifier.set("sources")
 
     from(kotlin.sourceSets["main"].kotlin.srcDirs)
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.github.Abhimanyu14"
-            artifactId = "emoji-core"
-            version = "1.0.7"
+project.afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.Abhimanyu14"
+                artifactId = "emoji-core"
+                version = "1.0.7"
 
-            from(components["kotlin"])
-            artifact(tasks.getByName("androidReleaseSourcesJar"))
+                // Publish both the main JAR and the sources JAR
+                from(components["kotlin"])
+                artifact(tasks.getByName("androidReleaseSourcesJar"))
+            }
         }
     }
 }

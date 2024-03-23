@@ -23,9 +23,11 @@ class EmojiFetcherImpl(
             )
         }
 
-        val okHttpClientBuilder = OkHttpClient().newBuilder().cache(
-            cache = cache,
-        )
+        val okHttpClientBuilder = OkHttpClient()
+            .newBuilder()
+            .cache(
+                cache = cache,
+            )
 
         val okHttpClient = okHttpClientBuilder.build()
         val request = Request.Builder()
@@ -34,28 +36,29 @@ class EmojiFetcherImpl(
             )
             .build()
 
-        okHttpClient.newCall(
-            request = request,
-        ).enqueue(
-            responseCallback = object : Callback {
-                override fun onFailure(
-                    call: Call,
-                    e: IOException,
-                ) {
-                    callback.onFetchFailure(
-                        errorMessage = e.message ?: "An error occurred",
-                    )
-                }
+        okHttpClient
+            .newCall(
+                request = request,
+            ).enqueue(
+                responseCallback = object : Callback {
+                    override fun onFailure(
+                        call: Call,
+                        ioException: IOException,
+                    ) {
+                        callback.onFetchFailure(
+                            errorMessage = ioException.message ?: "An error occurred",
+                        )
+                    }
 
-                override fun onResponse(
-                    call: Call,
-                    response: Response,
-                ) {
-                    callback.onFetchSuccess(
-                        data = response.body?.string().orEmpty(),
-                    )
-                }
-            },
-        )
+                    override fun onResponse(
+                        call: Call,
+                        response: Response,
+                    ) {
+                        callback.onFetchSuccess(
+                            data = response.body?.string().orEmpty(),
+                        )
+                    }
+                },
+            )
     }
 }

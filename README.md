@@ -32,7 +32,7 @@ dependencies {
 
 ## Kotlin
 
-The [Main application](/src/main/kotlin/emoji/core/Main.kt)  demonstrates how to use Emoji core to fetch emojis, using
+The [Main application](/src/main/kotlin/emoji/core/Main.kt) demonstrates how to use Emoji core to fetch emojis, using
 coroutines. </br>
 </br>
 For demonstration purposes `runBlocking` is used. For actual projects call `emojiDataSource.getAllEmojis()` in a
@@ -45,9 +45,9 @@ emojis.
 
 # Dependencies
 
-* kotlinx-coroutines-core
-* kotlinx-serialization-json
-* okhttp3
+- kotlinx-coroutines-core
+- kotlinx-serialization-json
+- okhttp3
 
 # Issues
 
@@ -56,13 +56,13 @@ You can also directly reach out to me via [LinkedIn](https://www.linkedin.com/in
 
 ## Find this repository useful? ♥️
 
-Support it by joining __[stargazers](https://github.com/Abhimanyu14/emoji-core/stargazers)__ for this repository. 🌟  
-Also __[follow](https://github.com/Abhimanyu14)__ me for my next creations! 🤗
+Support it by joining **[stargazers](https://github.com/Abhimanyu14/emoji-core/stargazers)** for this repository. 🌟  
+Also **[follow](https://github.com/Abhimanyu14)** me for my next creations! 🤗
 
 # License
 
 ```
-Copyright 2023 Abhimanyu
+Copyright 2024 Abhimanyu
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
