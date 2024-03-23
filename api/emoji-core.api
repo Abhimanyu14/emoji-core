@@ -1,10 +1,13 @@
 public final class emoji/core/MainKt {
-	public static final fun main ()V
 	public static synthetic fun main ([Ljava/lang/String;)V
 }
 
 public abstract interface class emoji/core/datasource/EmojiDataSource {
-	public abstract fun getAllEmojis (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getAllEmojis (Ljava/io/File;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class emoji/core/datasource/EmojiDataSource$DefaultImpls {
+	public static synthetic fun getAllEmojis$default (Lemoji/core/datasource/EmojiDataSource;Ljava/io/File;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 }
 
 public final class emoji/core/model/NetworkEmoji {

@@ -1,6 +1,7 @@
 package emoji.core.emojifetcher
 
 import emoji.core.model.NetworkEmoji
+import java.io.IOException
 
 internal interface EmojiFetchCallback {
     fun onFetchSuccess(
@@ -8,6 +9,6 @@ internal interface EmojiFetchCallback {
     )
 
     fun onFetchFailure(
-        errorMessage: String,
+        ioException: IOException,
     )
 }
