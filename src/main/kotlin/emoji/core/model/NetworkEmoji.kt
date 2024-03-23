@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class NetworkEmoji(
+public data class NetworkEmoji(
     @SerialName("character")
     val character: String,
 
