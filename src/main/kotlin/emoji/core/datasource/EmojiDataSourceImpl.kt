@@ -10,22 +10,23 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
-class EmojiDataSourceImpl(
-    private val cacheFile: File? = null,
+internal class EmojiDataSourceImpl(
+    cacheFile: File? = null,
+) : EmojiDataSource {
     private val emojiFetcher: EmojiFetcher = EmojiFetcherImpl(
         cacheFile = cacheFile,
-    ),
-) : EmojiDataSource {
+    )
+
     override suspend fun getAllEmojis(): List<NetworkEmoji> {
         return suspendCoroutine { continuation ->
             emojiFetcher.fetchEmojiData(
                 callback = object : EmojiFetchCallback {
                     override fun onFetchSuccess(
-                        data: String,
+                        emojis: List<NetworkEmoji>,
                     ) {
-                        val emojis = parseEmojiData(
-                            data = data,
-                        )
+//                        val emojis = parseEmojiData(
+//                            data = data,
+//                        )
                         continuation.resume(
                             value = emojis,
                         )

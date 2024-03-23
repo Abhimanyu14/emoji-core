@@ -1,8 +1,10 @@
 package emoji.core.emojifetcher
 
-interface EmojiFetchCallback {
+import emoji.core.model.NetworkEmoji
+
+internal interface EmojiFetchCallback {
     fun onFetchSuccess(
-        data: String,
+        emojis: List<NetworkEmoji>
     )
 
     fun onFetchFailure(
