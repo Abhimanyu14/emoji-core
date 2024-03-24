@@ -38,15 +38,18 @@ internal class EmojiFetcherImpl(
 
         val okHttpClient = okHttpClientBuilder.build()
         val request = Request.Builder()
-//            .cacheControl(
-//                cacheControl = CacheControl.Builder()
-//                    .onlyIfCached()
-//                    .maxStale(
-//                        maxStale = 1,
-//                        timeUnit = TimeUnit.DAYS,
-//                    )
-//                    .build(),
-//            )
+            .cacheControl(
+                cacheControl = CacheControl.Builder()
+                    .minFresh(
+                        minFresh = 3,
+                        timeUnit = TimeUnit.DAYS,
+                    )
+                    .maxStale(
+                        maxStale = 30,
+                        timeUnit = TimeUnit.DAYS,
+                    )
+                    .build(),
+            )
             .url(
                 url = EmojiFetcherImplConstants.UNICODE_EMOJIS_URL,
             )
