@@ -10,7 +10,7 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
-internal class EmojiDataSourceImpl : EmojiDataSource {
+public class EmojiDataSourceImpl : EmojiDataSource {
     override suspend fun getAllEmojis(
         cacheFile: File?,
     ): List<NetworkEmoji> {

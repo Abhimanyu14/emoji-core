@@ -10,6 +10,11 @@ public final class emoji/core/datasource/EmojiDataSource$DefaultImpls {
 	public static synthetic fun getAllEmojis$default (Lemoji/core/datasource/EmojiDataSource;Ljava/io/File;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
 }
 
+public final class emoji/core/datasource/EmojiDataSourceImpl : emoji/core/datasource/EmojiDataSource {
+	public fun <init> ()V
+	public fun getAllEmojis (Ljava/io/File;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
 public final class emoji/core/model/NetworkEmoji {
 	public static final field Companion Lemoji/core/model/NetworkEmoji$Companion;
 	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
