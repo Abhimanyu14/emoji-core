@@ -50,7 +50,7 @@ project.afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.Abhimanyu14"
                 artifactId = "emoji-core"
-                version = "1.0.11"
+                version = "1.0.12"
 
                 // Publish both the main JAR and the sources JAR
                 from(components["kotlin"])
