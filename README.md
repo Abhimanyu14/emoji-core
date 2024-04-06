@@ -1,9 +1,12 @@
+<a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+[![](https://jitpack.io/v/Abhimanyu14/emoji-core.svg)](https://jitpack.io/#Abhimanyu14/emoji-core)
+[![GitHub Repo Stars](https://img.shields.io/github/stars/Abhimanyu14/emoji-core?style=social)](https://github.com/Abhimanyu14/emoji-core/stargazers)
+[![Fork Repo](https://img.shields.io/github/forks/Abhimanyu14/emoji-core?logo=github&style=social)](https://github.com/Abhimanyu14/emoji-core/fork)
+
 # Emoji Core
 
-<a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
-
 Emoji core is a pure Kotlin library that fetches all emojis supported in
-the [latest Unicode standard 15.0](https://unicode.org/versions/Unicode15.0.0/) (Updated as on 13 September 2022).
+the [latest Unicode standard 15.1](https://www.unicode.org/versions/Unicode15.1.0/) (Updated as on 2023 September 12).
 
 # Setup
 
