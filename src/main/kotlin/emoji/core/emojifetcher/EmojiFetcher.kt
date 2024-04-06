@@ -1,7 +1,7 @@
 package emoji.core.emojifetcher
 
 private object EmojiFetcherConstants {
-    const val UNICODE_EMOJIS_URL = "https://unicode.org/Public/emoji/15.1/emoji-test.txt"
+    const val UNICODE_EMOJIS_URL = "https://makeappssimple.com/hosting/emoji_core/emoji.txt"
 }
 
 internal interface EmojiFetcher {
