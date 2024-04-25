@@ -17,7 +17,6 @@ public final class emoji/core/datasource/EmojiDataSourceImpl : emoji/core/dataso
 
 public final class emoji/core/model/NetworkEmoji {
 	public static final field Companion Lemoji/core/model/NetworkEmoji$Companion;
-	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 	public final fun component1 ()Ljava/lang/String;
 	public final fun component2 ()Ljava/lang/String;
@@ -34,7 +33,6 @@ public final class emoji/core/model/NetworkEmoji {
 	public final fun getUnicodeName ()Ljava/lang/String;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public static final synthetic fun write$Self (Lemoji/core/model/NetworkEmoji;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
 }
 
 public final class emoji/core/model/NetworkEmoji$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
