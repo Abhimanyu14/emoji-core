@@ -32,7 +32,9 @@ public class EmojiDataSourceImpl : EmojiDataSource {
                         ioException: IOException,
                     ) {
                         continuation.resumeWithException(
-                            exception = IOException("Fetch failed: ${ioException.message ?: "An error occurred"}"),
+                            exception = IOException(
+                                "Fetch failed: ${ioException.message ?: "An error occurred"}",
+                            ),
                         )
                     }
                 },
