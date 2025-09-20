@@ -5,8 +5,7 @@
 
 # Emoji Core
 
-Emoji core is a pure Kotlin library that fetches all emojis supported in
-the [latest Unicode standard 15.1](https://www.unicode.org/versions/Unicode15.1.0/) (Updated as on 2023 September 12).
+Emoji core is a pure Kotlin library that fetches all emojis supported in the [latest Unicode standard 17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) (Updated as on 2025 September 20).
 
 # Setup
 
@@ -45,6 +44,13 @@ non-blocking coroutine.
 
 [Compose Emoji Picker](https://github.com/Abhimanyu14/compose-emoji-picker) internally uses Emoji Core for fetching the
 emojis.
+
+# Updating Emojis Steps
+
+1. Get new emojis from https://www.unicode.org/Public/17.0.0/emoji/emoji-test.txt.
+2. Upload them to https://github.com/Abhimanyu14/make-apps-simple/blob/main/public/hosting/emoji_core/emoji.txt.
+3. Deploy the site with the updated file.
+4. Ensure the updated file is deployed - https://makeappssimple.com/hosting/emoji_core/emoji.txt.
 
 # Dependencies
 
