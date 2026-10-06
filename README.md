@@ -5,7 +5,7 @@
 
 # Emoji Core
 
-Emoji core is a pure Kotlin library that fetches all emojis supported in the [latest Unicode standard 17.0.0](https://www.unicode.org/versions/Unicode17.0.0/) (Updated as on 2025 September 20).
+Emoji core is a pure Kotlin library that fetches all emojis supported in the [latest Unicode standard 18.0.0](https://www.unicode.org/versions/Unicode18.0.0/) (Updated as on 2026 October 06).
 
 # Setup
 
@@ -47,10 +47,10 @@ emojis.
 
 # Updating Emojis Steps
 
-1. Get new emojis from https://www.unicode.org/Public/17.0.0/emoji/emoji-test.txt.
-2. Upload them to https://github.com/Abhimanyu14/make-apps-simple/blob/main/public/hosting/emoji_core/emoji.txt.
+1. Get new emojis from https://www.unicode.org/Public/18.0.0/emoji/emoji-test.txt.
+2. Upload them to https://github.com/Abhimanyu14/Abhimanyu14.github.io/blob/main/hosting/emoji_core/emoji.txt.
 3. Deploy the site with the updated file.
-4. Ensure the updated file is deployed - https://makeappssimple.com/hosting/emoji_core/emoji.txt.
+4. Ensure the updated file is deployed - https://abhimanyu14.github.io/hosting/emoji_core/emoji.txt.
 
 # Dependencies
 
