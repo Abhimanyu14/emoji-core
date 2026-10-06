@@ -4,7 +4,7 @@ import emoji.core.datasource.EmojiDataSource
 import emoji.core.datasource.EmojiDataSourceImpl
 import kotlinx.coroutines.runBlocking
 
-internal fun main() = runBlocking {
+internal fun main(): Unit = runBlocking {
     val emojiDataSource: EmojiDataSource = EmojiDataSourceImpl()
     val emojis = emojiDataSource.getAllEmojis()
     println(emojis)
